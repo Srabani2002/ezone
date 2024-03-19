@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController
 { 
-    @RequestMapping("/srabani")
+    @RequestMapping("/")
     public String home()
     {
         System.out.println("Inside home after");
