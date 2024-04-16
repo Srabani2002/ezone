@@ -1145,7 +1145,7 @@ nav.main-menu {
 	vertical-align: middle;
 }
 
-.main-menu ul>li:nth-child (6) {
+.main-menu ul>li:nth-child(6) {
 	padding-right: 0px;
 }
 
@@ -2158,11 +2158,11 @@ ul.lik li a:hover {
 
 
 .brand_color {
-     background-color: #ffc221;
+     background-image: linear-gradient(yellow,red,white);
 }
 .brand_color .titlepage {
-     margin-top: 70px;
-padding-bottom: 70px;
+     margin-top: 50px;
+padding-bottom: 30px;
 text-align: center;
 }
 
