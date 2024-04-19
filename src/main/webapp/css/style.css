@@ -1986,7 +1986,7 @@ margin-top: 20px;
   font-size: 17px; line-height: 28px;  padding-top: 40px; padding-bottom: 40px; display: inline-block;
  }
 .img_bg i {float: left; display: flex; flex-wrap: wrap;}
-.img_bg i img {width: 149px; height: 149px;}
+.img_bg i img {width: 149px; height: 149px; border-radius: 50%;}
 .img_bg  span {color: #000; font-size: 28px; line-height: 28px; padding-left: 40px; padding-top: 41px;}
 .img_bg .date {font-weight: normal; font-size: 16px; } 
 
