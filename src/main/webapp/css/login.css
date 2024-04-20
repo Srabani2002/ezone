@@ -47,6 +47,31 @@ button {
     padding: 50px 30px 0;
 }
 
+label span {
+    font-size: 12px;
+    color: #ffc107;
+    text-transform: uppercase;
+}
+
+.form.sign-in label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.form.sign-in label input {
+    border: 1px solid black;
+    padding: 5px; /* Adjust padding as needed */
+    margin-bottom: 10px; /* Adjust margin as needed */
+    width: 250px; /* Adjust width as needed */
+    color: #ffc107;
+}
+
+.form.sign-in .forgot-pass {
+    color: #000000; /* Piano black color */
+}
+
+
 .sub-cont {
     overflow: hidden;
     position: absolute;
@@ -274,6 +299,39 @@ input {
 .sign-in {
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
+}
+
+.form.sign-up label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #ffc107; /* Yellow text color */
+}
+
+.form.sign-up label input[type="text"],
+.form.sign-up label input[type="email"],
+.form.sign-up label input[type="password"] {
+    border: 1px solid black; /* Black border */
+    padding: 5px; /* Adjust padding as needed */
+    margin-bottom: 10px; /* Adjust margin as needed */
+    width: 250px; /* Adjust width as needed */
+    color: #ffc107; /* Yellow text color */
+}
+
+.form.sign-up h2 {
+    color: #ffc107; /* Yellow text color */
+}
+
+.form.sign-up .submit {
+    color: #ffffff; /* White color for text on the button */
+    background-color: #000000; /* Piano black color for button background */
+    border: none;
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer;
+}
+
+.form.sign-up .submit:hover {
+    background-color: #d4af7a; /* Darker shade when hovered */
 }
 
 .cont.s--signup .sign-in {
