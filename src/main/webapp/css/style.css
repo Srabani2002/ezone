@@ -466,6 +466,17 @@ nav.main-menu {
 	margin-left: 0;
 }
 
+.menu-area-main {
+    white-space: nowrap;
+}
+
+.menu-area-main li {
+    display: inline-block;
+    margin-right: 6px; /* Adjust as needed */
+    list-style: none;
+}
+
+
 .menu-area-main li:hover a,
 .menu-area-main li:focus a {
 	color: #ffc221;
@@ -1649,11 +1660,11 @@ input[type="radio"] .styled:checked+label::after {
 
 .buy {
 background: #ffc221;
-padding: 7px 41px !important;
+padding: 7px 38px !important;
 margin-top: 18px;
 border-radius: 5px;
 display: inline-block;
-float: right;
+float: inline-end;
 }
 
 .buy:hover {
