@@ -472,7 +472,7 @@ nav.main-menu {
 
 .menu-area-main li {
     display: inline-block;
-    margin-right: 6px; /* Adjust as needed */
+    margin-right: 1px; /* Adjust as needed */
     list-style: none;
 }
 
