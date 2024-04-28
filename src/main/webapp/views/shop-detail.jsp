@@ -1,5 +1,6 @@
+<%@ page language="java"%>
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
     <!-- basic -->
@@ -74,7 +75,7 @@
                      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                         <div class="full">
                            <div class="center-desk">
-                              <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="logo"/></a> </div>
+                              <div class="logo"> <a href="/"><img src="images/logo.png" alt="logo"/></a> </div>
                            </div>
                         </div>
                      </div>
@@ -83,7 +84,7 @@
                            <div class="limit-box">
                               <nav class="main-menu">
                                  <ul class="menu-area-main">
-                                    <li> <a href="index.html">Home</a> </li>
+                                    <li> <a href="/">Home</a> </li>
                                     <li class="active" > <a href="product.html">Product</a> </li>
                                     <li> <a href="refurbished.html">Refurb</a> </li>
                                     <li> <a href="services.html">Services</a> </li>
@@ -95,7 +96,7 @@
                         </div>
                      </div>
                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
-                        <li><a class="buy" href="login.html">Login</a></li>
+                        <li><a class="buy" href="/login">Login</a></li>
                      </div>
                   </div>
                </div>
@@ -120,15 +121,15 @@
             </div>
             <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Fruitables</h1></a>
+                    <a href="/" class="navbar-brand"><h1 class="text-primary display-6">Fruitables</h1></a>
                     <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-primary"></span>
                     </button>
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="/" class="nav-item nav-link">Home</a>
                             <a href="shop.html" class="nav-item nav-link">Shop</a>
-                            <a href="shop-detail.html" class="nav-item nav-link active">Shop Detail</a>
+                            <a href="/shop-detail" class="nav-item nav-link active">Shop Detail</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
@@ -144,7 +145,7 @@
                             <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
                             <a href="#" class="position-relative me-4 my-auto">
                                 <i class="fa fa-shopping-bag fa-2x"></i>
-                                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+                                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-wid 20px;">3</span>
                             </a>
                             <a href="#" class="my-auto">
                                 <i class="fas fa-user fa-2x"></i>
@@ -215,7 +216,7 @@
                                 </div>
                                 <p class="mb-4">Zenfone is an extraordinary smartphone that combines stylish design with the latest high-end components and software.</p>
                                 <p class="mb-4">ROG Phone introduces a landscape-oriented design, featuring unique AirTriggers that enable precise control with a more comfortable grip. </p>
-                                <div class="input-group quantity mb-5" style="width: 100px;">
+                                <div class="input-group quantity mb-5" style="wid 100px;">
                                     <div class="input-group-btn">
                                         <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
                                             <i class="fa fa-minus"></i>
@@ -294,7 +295,7 @@
                                     </div>
                                     <div class="tab-pane" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
                                         <div class="d-flex">
-                                            <img src="img/avatar.jpg" class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;" alt="">
+                                            <img src="img/avatar.jpg" class="img-fluid rounded-circle p-3" style="wid 100px; height: 100px;" alt="">
                                             <div class="">
                                                 <p class="mb-2" style="font-size: 14px;">April 12, 2024</p>
                                                 <div class="d-flex justify-content-between">
@@ -312,7 +313,7 @@
                                             </div>
                                         </div>
                                         <div class="d-flex">
-                                            <img src="img/avatar.jpg" class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;" alt="">
+                                            <img src="img/avatar.jpg" class="img-fluid rounded-circle p-3" style="wid 100px; height: 100px;" alt="">
                                             <div class="">
                                                 <p class="mb-2" style="font-size: 14px;">April 12, 2024</p>
                                                 <div class="d-flex justify-content-between">
@@ -421,7 +422,7 @@
                             <div class="col-lg-12">
                                 <h4 class="mb-4">Featured products</h4>
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded" style="width: 100px; height: 100px;">
+                                    <div class="rounded" style="wid 100px; height: 100px;">
                                         <img src="https://cdn.pixabay.com/photo/2016/01/10/22/30/smartphone-1132677_1280.png" class="img-fluid rounded" alt="Image">
                                     </div>
                                     <div>
@@ -440,7 +441,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded" style="width: 100px; height: 100px;">
+                                    <div class="rounded" style="wid 100px; height: 100px;">
                                         <img src="img/featur-2.jpg" class="img-fluid rounded" alt="">
                                     </div>
                                     <div>
@@ -459,7 +460,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded" style="width: 100px; height: 100px;">
+                                    <div class="rounded" style="wid 100px; height: 100px;">
                                         <img src="img/featur-3.jpg" class="img-fluid rounded" alt="">
                                     </div>
                                     <div>
@@ -478,7 +479,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded me-4" style="width: 100px; height: 100px;">
+                                    <div class="rounded me-4" style="wid 100px; height: 100px;">
                                         <img src="img/vegetable-item-4.jpg" class="img-fluid rounded" alt="">
                                     </div>
                                     <div>
@@ -497,7 +498,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded me-4" style="width: 100px; height: 100px;">
+                                    <div class="rounded me-4" style="wid 100px; height: 100px;">
                                         <img src="" class="img-fluid rounded" alt="">
                                     </div>
                                     <div>
@@ -516,7 +517,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded me-4" style="width: 100px; height: 100px;">
+                                    <div class="rounded me-4" style="wid 100px; height: 100px;">
                                         <img src="" class="img-fluid rounded" alt="">
                                     </div>
                                     <div>

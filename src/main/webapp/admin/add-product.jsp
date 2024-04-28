@@ -1,3 +1,4 @@
+<%@ page language="java"%>
 <!DOCTYPE html>
 <html lang="en" xmlns:th = "http://www.thymeleaf.org">
 
@@ -90,29 +91,29 @@
           </div>
           <div class="row tm-edit-product-row">
             <div class="col-xl-6 col-lg-6 col-md-12">
-              <form action="#" th:action="@{/admin-add-products}" method="post" class="tm-edit-product-form" th:object="${product}" >
+              <form action="#" action="@{/admin-add-products}" method="post" class="tm-edit-product-form" object="${product}" >
                 <div class="form-group mb-3">
                   <label for="pname">Product Name
                   </label>
-                  <input id="pname" name="pname" type="text" class="form-control validate" th:field="*{pname}" required />
+                  <input id="pname" name="pname" type="text" class="form-control validate" field="*{pname}" required />
                 </div>
                 <div class="form-group mb-3">
                   <label for="vendor">Vendor
                   </label>
-                  <input id="vendor" name="vendor" type="text" class="form-control validate" required th:field="*{vendor}" />
+                  <input id="vendor" name="vendor" type="text" class="form-control validate" required field="*{vendor}" />
                 </div>
                 <div class="form-group mb-3">
                   <label for="price">Price
                   </label>
-                  <input id="price" name="price" type="text" class="form-control validate" th:field="*{price}" required />
+                  <input id="price" name="price" type="text" class="form-control validate" field="*{price}" required />
                 </div>
                 <div class="form-group mb-3">
                   <label for="description">Description</label>
-                  <textarea class="form-control validate" rows="3" th:field="*{description}" required></textarea>
+                  <textarea class="form-control validate" rows="3" field="*{description}" required></textarea>
                 </div>
                 <div class="form-group mb-3">
                   <label for="category">Category</label>
-                  <select class="custom-select tm-select-accounts" id="category" th:field="*{category}" >
+                  <select class="custom-select tm-select-accounts" id="category" field="*{category}" >
                     <option value = "null">--Select category--</option>
                     <option value="Whole Spices">Whole Spices</option>
                     <option value="Ground Spices">Ground Spices</option>
@@ -126,12 +127,12 @@
                     <label for="expire_date">Expire Date
                     </label>
                     <input id="expire_date" name="expire_date" type="text" class="form-control validate"
-                      data-large-mode="true" th:field="*{expiry_date}" />
+                      data-large-mode="true" field="*{expiry_date}" />
                   </div>
                   <div class="form-group mb-3 col-xs-12 col-sm-6">
                     <label for="stock">Units In Stock
                     </label>
-                    <input id="stock" name="stock" type="text" class="form-control validate" th:field="*{quantity}" required />
+                    <input id="stock" name="stock" type="text" class="form-control validate" field="*{quantity}" required />
                   </div>
                 </div>
 

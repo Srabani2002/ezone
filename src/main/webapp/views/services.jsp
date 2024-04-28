@@ -1,5 +1,6 @@
+<%@ page language="java"%>
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<html lang="en">
    <head>
       <!-- basic -->
       <meta charset="utf-8">
@@ -66,7 +67,7 @@
                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                   <div class="full">
                      <div class="center-desk">
-                        <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="logo"/></a> </div>
+                        <div class="logo"> <a href="/"><img src="images/logo.png" alt="logo"/></a> </div>
                      </div>
                   </div>
                </div>
@@ -75,12 +76,12 @@
                      <div class="limit-box">
                         <nav class="main-menu">
                            <ul class="menu-area-main">
-                              <li> <a href="index.html">Home</a> </li>
-                              <li> <a href="product.html">Product</a> </li>
-                              <li> <a href="refurbished.html">Refurb</a> </li>
-                              <li class = "active"> <a href="services.html">Services</a> </li>
-                              <li> <a href="blog.html"> Blog</a> </li>
-                              <li> <a href="contact.html">Contact Us</a> </li>
+                              <li> <a href="/">Home</a> </li>
+                              <li > <a href="/product">Product</a> </li>
+                              <li > <a href="/refurbished">Refurb</a> </li>
+                              <li class = "active"> <a href="/services">Services</a> </li>
+                              <li > <a href="/blog"> Blog</a> </li>
+                              <li> <a href="/contact">Contact Us</a> </li>
                                
                            </ul>
                         </nav>
@@ -88,7 +89,7 @@
                   </div>
                </div>
                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
-                  <li><a class="buy" href="login.html">Login</a></li>
+                  <li><a class="buy" href="/login">Login</a></li>
                </div>
             </div>
          </div>
@@ -127,84 +128,84 @@
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                    <div class="product-box">
                       <i><img src="https://cdn.pixabay.com/photo/2016/05/31/12/20/wlan-1426767_960_720.jpg"/></i>
-                      <h3><a href="./shop-detail.html">Internet Modems Repair</a></h3>
+                      <h3><a href="/shop-detail">Internet Modems Repair</a></h3>
                       <span>&#8377;999</span>
                    </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                    <div class="product-box">
                       <i><img src="https://cdn.pixabay.com/photo/2015/11/03/09/08/photograph-1020131_1280.jpg"/></i>
-                      <h3><a href="./shop-detail.html">Smartphone and Tablet Repair</a></h3>
+                      <h3><a href="/shop-detail">Smartphone and Tablet Repair</a></h3>
                       <span>&#8377;799</span>
                    </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                    <div class="product-box">
                       <i><img src="https://cdn.pixabay.com/photo/2023/07/04/19/43/man-8106958_1280.png"/></i>
-                      <h3><a href="./shop-detail.html">Data Recovery Services</a></h3>
+                      <h3><a href="/shop-detail">Data Recovery Services</a></h3>
                       <span>&#8377;899</span>
                    </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                    <div class="product-box">
                       <i><img src="https://cdn.pixabay.com/photo/2016/02/20/05/38/household-1211640_960_720.png"/></i>
-                      <h3><a href="./shop-detail.html">Home Theater Installation</a></h3>
+                      <h3><a href="/shop-detail">Home Theater Installation</a></h3>
                       <span>&#8377;999</span>
                    </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                    <div class="product-box">
                       <i><img src="https://cdn.pixabay.com/photo/2020/04/04/04/23/folder-5000783_1280.png"/></i>
-                      <h3><a href="./shop-detail.html">Network Setup and Maintenance</a></h3>
+                      <h3><a href="/shop-detail">Network Setup and Maintenance</a></h3>
                       <span>&#8377;899</span>
                    </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                    <div class="product-box">
                       <i><img src="https://cdn.pixabay.com/photo/2015/05/25/05/27/network-782707_1280.png"/></i>
-                      <h3><a href="./shop-detail.html"></a>Security System Installations</h3>
+                      <h3><a href="/shop-detail"></a>Security System Installations</h3>
                       <span>&#8377;1999</span>
                    </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                    <div class="product-box">
                       <i><img src="https://cdn.pixabay.com/photo/2022/01/18/11/42/repair-6946846_1280.png"/></i>
-                      <h3><a href="./shop-detail.html">Application Repair</a></h3>
+                      <h3><a href="/shop-detail">Application Repair</a></h3>
                       <span>&#8377;899</span>
                    </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                    <div class="product-box">
                       <i><img src="images/productimage/recycling.jpeg"/></i>
-                      <h3><a href="./shop-detail.html">Electronic Recycling and Disposal</a></h3>
+                      <h3><a href="/shop-detail">Electronic Recycling and Disposal</a></h3>
                       <span>&#8377;999</span>
                    </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                    <div class="product-box">
                       <i><img src="images/productimage/sw inst.jpeg"/></i>
-                      <h3><a href="./shop-detail.html">Software Installation and Troubleshooting</a></h3>
+                      <h3><a href="/shop-detail">Software Installation and Troubleshooting</a></h3>
                       <span>&#8377;1999</span>
                    </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                    <div class="product-box">
                       <i><img src="images/productimage/drone.jpeg"/></i>
-                      <h3><a href="./shop-detail.html">Drone Repair and Maintenance</a></h3>
+                      <h3><a href="/shop-detail">Drone Repair and Maintenance</a></h3>
                       <span>&#8377;1999</span>
                    </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                    <div class="product-box">
                       <i><img src="images/productimage/game.jpeg"/></i>
-                      <h3><a href="./shop-detail.html">Game Console Repair</a></h3>
+                      <h3><a href="/shop-detail">Game Console Repair</a></h3>
                       <span>&#8377;999</span>
                    </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                    <div class="product-box">
                       <i><img src="images/productimage/visual.jpeg"/></i>
-                      <h3><a href="./shop-detail.html">Audio and Visual Equipment</a></h3>
+                      <h3><a href="/shop-detail">Audio and Visual Equipment</a></h3>
                       <span>&#8377;799</span>
                    </div>
                 </div>

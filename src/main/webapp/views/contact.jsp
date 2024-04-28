@@ -1,5 +1,6 @@
+<%@page language="java"%>
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<html lang="en">
    <head>
       <!-- basic -->
       <meta charset="utf-8">
@@ -30,7 +31,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
    </head>
    <!-- body -->
-   <body class="main-layout product_page">
+   <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#" /></div>
@@ -66,7 +67,7 @@
                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                   <div class="full">
                      <div class="center-desk">
-                        <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="logo"/></a> </div>
+                        <div class="logo"> <a href="/"><img src="images/logo.png" alt="logo"/></a> </div>
                      </div>
                   </div>
                </div>
@@ -75,12 +76,13 @@
                      <div class="limit-box">
                         <nav class="main-menu">
                            <ul class="menu-area-main">
-                              <li> <a href="index.html">Home</a> </li>
-                              <li class="active" > <a href="product.html">Product</a> </li>
-                              <li> <a href="refurbished.html">Refurb</a> </li>
-                              <li> <a href="services.html">Services</a> </li>
-                              <li> <a href="blog.html"> Blog</a> </li>
-                              <li> <a href="contact.html">Contact Us</a> </li>
+                              <li> <a href="/">Home</a> </li>
+                              <li> <a href="/product">Product</a> </li>
+                              <li> <a href="/refurbished">Refurb</a> </li>
+                              <li> <a href="/services">Services</a> </li>
+                              <li> <a href="/blog"> Blog</a> </li>
+                              <li class = "active" > <a href="/contact">Contact Us</a> </li>
+                              <!-- <li class="mean-last"> <a href="#contact">signup</a> </li> -->
                                
                            </ul>
                         </nav>
@@ -88,106 +90,56 @@
                   </div>
                </div>
                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
-                  <li><a class="buy" href="login.html">Login</a></li>
+                  <li><a class="buy" href="/login">Login</a></li>
                </div>
             </div>
          </div>
          <!-- end header inner --> 
       </header>
       <!-- end header -->
-       <div class="brand_color">
+      <div class="brand_color">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>our products</h2>
+                        <h2>Contact Us</h2>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-      <!-- our product -->
-      <div class="product">
-         <div class="container">
+
+    <!-- contact -->
+    <div class="contact">
+        <div class="container">
             <div class="row">
-               <div class="col-md-12">
-                  <div class="title">
-                     
-                     <span>We package <b>the products</b> with best services to make you a happy customer.</span>
-                  </div>
-               </div>
+                <div class="col-md-12">
+
+                    <form class="main_form">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <input class="form-control" placeholder="Your name" type="text" name="Your Name" required>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <input class="form-control" placeholder="Email" type="text" name="Email" required>
+                            </div>
+                            <div class=" col-md-12">
+                                <input class="form-control" placeholder="Phone" type="text" name="Phone" required>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea class="textarea" placeholder="Message"></textarea>
+                            </div>
+                            <div class=" col-md-12">
+                                <button class="send">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="product-bg">
-         <div class="product-bg-white">
-         <div class="container">
-            <div class="row">
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src="images/productimage/samsung-1283938_1280.jpg"/></i>
-                     <h3><a href="./shop-detail.html"><b>Mobile Phones</b><br>
-                        Starting From
-                     </a></h3>
-                     <span>&#8377;4999</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src="images/productimage/apple-1868496_1280.jpg"/></i>
-                     <h3><a href="./shop-detail.html"><b>Desktop</b><br>Starting From</a></h3>
-                     <span>&#8377;39999</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src="https://cdn.pixabay.com/photo/2020/08/26/14/29/smartphone-5519653_1280.jpg"/></i>
-                     <h3><a href="./shop-detail.html"><b>Tabs</b><br>Starting From</a></h3>
-                     <span>&#8377;8999</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src="images/productimage/laptop.jpg"/></i>
-                     <h3><a href="./shop-detail.html"><b>Laptops</b><br>Starting From</a></h3>
-                     <span>&#8377;29999</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src="images/productimage/flash-memory-1306886_1280.jpg"/></i>
-                     <h3><a href="./shop-detail.html"><b>Pendrives</b><br>Starting From</a></h3>
-                     <span>&#8377;699</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src="images/productimage/powerbank.jpg"/></i>
-                     <h3><a href="./shop-detail.html"><b>Power Bank</b><br>Starting From</a></h3>
-                     <span>&#8377;999</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src="images/productimage/two-pin-3509490_960_720.jpg"/></i>
-                     <h3><a href="./shop-detail.html"><b>Mobile Charger</b><br>Starting From</a></h3>
-                     <span>&#8377;399</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src="images/productimage/earphones.jpg"/></i>
-                     <h3><a href="./shop-detail.html"><b>Earphones</b><br>Starting From</a></h3>
-                     <span>&#8377;299</span>
-                  </div>
-               </div>
-               
-               </div>
-               </div>
-            </div>
-         </div>
-         
+        </div>
+    </div>
+    <!-- end contact -->
       <!--  footer --> 
       <footr>
          <div class="footer">

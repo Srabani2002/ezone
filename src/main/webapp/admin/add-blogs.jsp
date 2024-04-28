@@ -1,3 +1,4 @@
+<%@ page language="java"%>
 <!DOCTYPE html>
 <html lang="en" xmlns:th = "http://www.thymeleaf.org">
 
@@ -5,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Admin - Edit Product</title>
+  <title>Admin - Add Blogs</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
   <!-- https://fonts.google.com/specimen/Roboto -->
   <link rel="stylesheet" href="ad-css/fontawesome.min.css" />
@@ -44,31 +45,29 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" href="products.html">
+            <a class="nav-link" href="products.html">
               <i class="fas fa-shopping-cart"></i> Products
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-shopping-cart"></i>
-                Orders
+            <a class="nav-link" href="./orders.html">
+                <i class="fas fa-shopping-basket"></i>Orders
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-shopping-cart"></i>
-                Blogs
+            <a class="nav-link active" href="./blogs.html">
+              <i class="fas fa-pencil-ruler"></i>
+              Blogs
             </a>
         </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="accounts.html">
-              <i class="far fa-user"></i> Accounts
+            <a class="nav-link" href="./accounts.html">
+              <i class="fas fa-user"></i> Accounts
             </a>
           </li>
-
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -86,61 +85,55 @@
         <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
           <div class="row">
             <div class="col-12">
-              <h2 class="tm-block-title d-inline-block">Edit Product</h2>
+              <h2 class="tm-block-title d-inline-block">Add Blog</h2>
             </div>
           </div>
           <div class="row tm-edit-product-row">
             <div class="col-xl-6 col-lg-6 col-md-12">
-              <form action="" method="post" class="tm-edit-product-form">
+              <form action="#" action="@{/admin-add-blogs}" method="post" class="tm-edit-product-form" object="${blogs}">
                 <div class="form-group mb-3">
-                  <label for="name">Product Name
-                  </label>
-                  <input id="name" name="name" type="text" value="Lorem Ipsum Product" class="form-control validate" />
+                    <label for="name">Blog Name</label>
+                    <input id="name" name="name" type="text" class="form-control validate" field="*{name}" required />
                 </div>
                 <div class="form-group mb-3">
-                  <label for="description">Description</label>
-                  <textarea class="form-control validate tm-small" rows="5"
-                    required>Lorem ipsum dolor amet gentrify glossier locavore messenger bag chillwave hashtag irony migas wolf kale chips small batch kogi direct trade shaman.</textarea>
+                    <label for="desc">Blog Description</label>
+                    <input id="desc" name="description" type="text" class="form-control validate" field="*{description}" required />
                 </div>
                 <div class="form-group mb-3">
-                  <label for="category">Category</label>
-                  <select class="custom-select tm-select-accounts" id="category">
-                    <option>Select category</option>
-                    <option value="1" selected>New Arrival</option>
-                    <option value="2">Most Popular</option>
-                    <option value="3">Trending</option>
-                  </select>
+                    <label for="content">Content</label>
+                    <textarea id="content" name="content" class="form-control validate" rows="5" field="*{content}" required></textarea>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" class="custom-select tm-select-accounts" field="*{category}">
+                        <!-- <option selected>Select category</option> -->
+                        <option value="New Arrival">New Arrival</option>
+                        <option value="Most Popular">Most Popular</option>
+                        <option value="Trending">Trending</option>
+                    </select>
                 </div>
                 <div class="row">
-                  <div class="form-group mb-3 col-xs-12 col-sm-6">
-                    <label for="expire_date">Expire Date
-                    </label>
-                    <input id="expire_date" name="expire_date" type="text" value="22 Oct, 2020"
-                      class="form-control validate" data-large-mode="true" />
-                  </div>
-                  <div class="form-group mb-3 col-xs-12 col-sm-6">
-                    <label for="stock">Units In Stock
-                    </label>
-                    <input id="stock" name="stock" type="text" value="19,765" class="form-control validate" />
-                  </div>
+                    <div class="form-group mb-3 col-xs-12 col-sm-6">
+                        <label for="post_date">Post Date</label>
+                        <input id="post_date" name="postDate" type="text" class="form-control validate" data-large-mode="true" field="*{postDate}" />
+                    </div>
+                    <div class="form-group mb-3 col-xs-12 col-sm-6">
+                        <label for="author">Author</label>
+                        <input id="author" name="author" type="text" class="form-control validate" data-large-mode="true" field="*{author}" />
+                    </div>
                 </div>
-
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-              <div class="tm-product-img-edit mx-auto">
-                <img src="img/product-image.jpg" alt="Product image" class="img-fluid d-block mx-auto">
-                <i class="fas fa-cloud-upload-alt tm-upload-icon"
-                  onclick="document.getElementById('fileInput').click();"></i>
-              </div>
-              <div class="custom-file mt-3 mb-3">
-                <input id="fileInput" type="file" style="display:none;" />
-                <input type="button" class="btn btn-primary btn-block mx-auto" value="CHANGE IMAGE NOW"
-                  onclick="document.getElementById('fileInput').click();" />
-              </div>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary btn-block text-uppercase">Update Now</button>
-            </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                    <div class="tm-product-img-dummy mx-auto">
+                        <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();"></i>
+                    </div>
+                    <div class="custom-file mt-3 mb-3">
+                        <input id="fileInput" type="file" style="display:none;" />
+                        <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD CONTENT IMAGE" onclick="document.getElementById('fileInput').click();" />
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Blog Now</button>
+                </div>
             </form>
           </div>
         </div>
@@ -156,9 +149,7 @@
   <!-- https://getbootstrap.com/ -->
   <script>
     $(function () {
-      $("#expire_date").datepicker({
-        defaultDate: "10/22/2020"
-      });
+      $("#expire_date").datepicker();
     });
   </script>
 </body>
