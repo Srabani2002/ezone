@@ -1,6 +1,6 @@
 <%@ page language="java"%>
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -37,8 +37,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto h-100">
                         <li class="nav-item">
-                            <a class="nav-link active" href="@{/dashboard}">
-                                <i class="fas fa-tachometer-alt"></i>
+                            <a class="nav-link active" href="/dashboard">
                                 Dashboard
                                 <span class="sr-only">(current)</span>
                             </a>
@@ -58,27 +57,39 @@
                         </li> -->
 
                         <li class="nav-item">
-                            <a class="nav-link" href="@{/admin-products}">
-                              <i class="fas fa-shopping-cart"></i> Products
+                            <a class="nav-link" href="/add-product">
+                              Products
+                            </a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="/admin-products">
+                              Refurbs
+                            </a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="/admin-products">
+                              Services
                             </a>
                           </li>
                   
                           <li class="nav-item">
-                            <a class="nav-link" href="@{admin-orders}">
-                                <i class="fas fa-shopping-basket"></i>Orders
+                            <a class="nav-link" href="/orders">
+                                Orders
                             </a>
                         </li>
                   
                         <li class="nav-item">
-                            <a class="nav-link" href="@{/admin-blogs}">
-                              <i class="fas fa-pencil-ruler"></i>
+                            <a class="nav-link" href="/add-blogs">
+                              
                               Blogs
                             </a>
                         </li>
                   
                           <li class="nav-item">
-                            <a class="nav-link" href="@{/admin}">
-                              <i class="fas fa-user"></i> Accounts
+                            <a class="nav-link" href="/admin">
+                              Accounts
                             </a>
                           </li>
                         <!-- <li class="nav-item dropdown">
@@ -98,7 +109,7 @@
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link d-block" href="@{/admin}">
+                            <a class="nav-link d-block" href="/admin">
                                 ADMIN-- <b>LOGOUT</b>
                             </a>
                         </li>

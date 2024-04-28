@@ -1,12 +1,12 @@
 <%@ page language="java"%>
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Admin - Edit Product</title>
+  <title>Admin - Add Product</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
   <!-- https://fonts.google.com/specimen/Roboto -->
   <link rel="stylesheet" href="ad-css/fontawesome.min.css" />
@@ -39,42 +39,45 @@
         <ul class="navbar-nav mx-auto h-100">
           <li class="nav-item">
             <a class="nav-link" href="dashboard.html">
-              <i class="fas fa-tachometer-alt"></i> Dashboard
+              Dashboard
               <span class="sr-only">(current)</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" href="products.html">
-              <i class="fas fa-shopping-cart"></i> Products
+            <a class="nav-link active" href="/add-product">
+              Products
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-shopping-cart"></i>
+            <a class="nav-link" href="/admin-products">
+              Refurbs
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/admin-products">
+              Services
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" href="/orders">
                 Orders
             </a>
         </li>
-
+  
         <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-shopping-cart"></i>
-                Blogs
+            <a class="nav-link" href="/add-blogs">
+              
+              Blogs
             </a>
         </li>
-
+  
           <li class="nav-item">
-            <a class="nav-link" href="accounts.html">
-              <i class="far fa-user"></i> Accounts
-            </a>
-          </li>
-
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link d-block" href="login.html">
-              ADMIN-- <b>LOGOUT</b>
+            <a class="nav-link" href="/admin">
+              Accounts
             </a>
           </li>
         </ul>
@@ -87,60 +90,70 @@
         <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
           <div class="row">
             <div class="col-12">
-              <h2 class="tm-block-title d-inline-block">Edit Product</h2>
+              <h2 class="tm-block-title d-inline-block">Add Refurbished Product</h2>
             </div>
           </div>
           <div class="row tm-edit-product-row">
             <div class="col-xl-6 col-lg-6 col-md-12">
-              <form action="" method="post" class="tm-edit-product-form">
+              <form action="#" action="/addproducts" method="post" class="tm-edit-product-form">
                 <div class="form-group mb-3">
-                  <label for="name">Product Name
+                  <label for="pname">Product Name
                   </label>
-                  <input id="name" name="name" type="text" value="Lorem Ipsum Product" class="form-control validate" />
+                  <input id="pname" name="pname" type="text" class="form-control validate" required />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="vendor">Vendor
+                  </label>
+                  <input id="vendor" name="vendor" type="text" class="form-control validate" required />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="price">Price
+                  </label>
+                  <input id="price" name="price" type="text" class="form-control validate" required />
                 </div>
                 <div class="form-group mb-3">
                   <label for="description">Description</label>
-                  <textarea class="form-control validate tm-small" rows="5"
-                    required>Lorem ipsum dolor amet gentrify glossier locavore messenger bag chillwave hashtag irony migas wolf kale chips small batch kogi direct trade shaman.</textarea>
+                  <textarea class="form-control validate" rows="3" required></textarea>
                 </div>
                 <div class="form-group mb-3">
                   <label for="category">Category</label>
-                  <select class="custom-select tm-select-accounts" id="category">
-                    <option>Select category</option>
-                    <option value="1" selected>New Arrival</option>
-                    <option value="2">Most Popular</option>
-                    <option value="3">Trending</option>
+                  <select class="custom-select tm-select-accounts" id="category" >
+                    <option value = "null">--Select category--</option>
+                    <option value="Desktop">Desktop</option>
+                    <option value="Laptops">Laptops</option>
+                    <option value="Smart Phones">Smart Phones</option>
+                    <option value="Drone">Drone</option>
+                    <option value="Earpodes">Earpodes</option>
                   </select>
                 </div>
                 <div class="row">
                   <div class="form-group mb-3 col-xs-12 col-sm-6">
-                    <label for="expire_date">Expire Date
+                    <label for="longivity">Longivity
                     </label>
-                    <input id="expire_date" name="expire_date" type="text" value="22 Oct, 2020"
-                      class="form-control validate" data-large-mode="true" />
+                    <input id="longivity" name="longivity" type="text" class="form-control validate"
+                      data-large-mode="true" />
                   </div>
                   <div class="form-group mb-3 col-xs-12 col-sm-6">
-                    <label for="stock">Units In Stock
+                    <label for="stock">Stocks Available
                     </label>
-                    <input id="stock" name="stock" type="text" value="19,765" class="form-control validate" />
+                    <input id="stock" name="stock" type="text" class="form-control validate" required />
                   </div>
                 </div>
 
             </div>
             <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-              <div class="tm-product-img-edit mx-auto">
-                <img src="img/product-image.jpg" alt="Product image" class="img-fluid d-block mx-auto">
+              <div class="tm-product-img-dummy mx-auto">
                 <i class="fas fa-cloud-upload-alt tm-upload-icon"
                   onclick="document.getElementById('fileInput').click();"></i>
               </div>
               <div class="custom-file mt-3 mb-3">
                 <input id="fileInput" type="file" style="display:none;" />
-                <input type="button" class="btn btn-primary btn-block mx-auto" value="CHANGE IMAGE NOW"
+                <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE"
                   onclick="document.getElementById('fileInput').click();" />
               </div>
             </div>
             <div class="col-12">
-              <button type="submit" class="btn btn-primary btn-block text-uppercase">Update Now</button>
+              <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Refurbished Product Now</button>
             </div>
             </form>
           </div>
@@ -157,9 +170,7 @@
   <!-- https://getbootstrap.com/ -->
   <script>
     $(function () {
-      $("#expire_date").datepicker({
-        defaultDate: "10/22/2020"
-      });
+      $("#expire_date").datepicker();
     });
   </script>
 </body>

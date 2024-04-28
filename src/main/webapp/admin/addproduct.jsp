@@ -1,6 +1,6 @@
 <%@ page language="java"%>
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -39,41 +39,45 @@
         <ul class="navbar-nav mx-auto h-100">
           <li class="nav-item">
             <a class="nav-link" href="dashboard.html">
-              <i class="fas fa-tachometer-alt"></i> Dashboard
+              Dashboard
               <span class="sr-only">(current)</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" href="products.html">
-              <i class="fas fa-shopping-cart"></i> Products
+            <a class="nav-link active" href="/add-product">
+              Products
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="./orders.html">
-                <i class="fas fa-shopping-basket"></i>Orders
+            <a class="nav-link" href="/admin-products">
+              Refurbs
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/admin-products">
+              Services
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" href="/orders">
+                Orders
             </a>
         </li>
-
+  
         <li class="nav-item">
-            <a class="nav-link" href="./blogs.html">
-              <i class="fas fa-pencil-ruler"></i>
+            <a class="nav-link" href="/add-blogs">
+              
               Blogs
             </a>
         </li>
-
+  
           <li class="nav-item">
-            <a class="nav-link" href="./accounts.html">
-              <i class="fas fa-user"></i> Accounts
-            </a>
-          </li>
-          
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link d-block" href="login.html">
-              ADMIN-- <b>Logout</b>
+            <a class="nav-link" href="/admin">
+              Accounts
             </a>
           </li>
         </ul>
@@ -91,35 +95,35 @@
           </div>
           <div class="row tm-edit-product-row">
             <div class="col-xl-6 col-lg-6 col-md-12">
-              <form action="#" action="@{/admin-add-products}" method="post" class="tm-edit-product-form" object="${product}" >
+              <form action="#" action="/addproducts" method="post" class="tm-edit-product-form">
                 <div class="form-group mb-3">
                   <label for="pname">Product Name
                   </label>
-                  <input id="pname" name="pname" type="text" class="form-control validate" field="*{pname}" required />
+                  <input id="pname" name="pname" type="text" class="form-control validate" required />
                 </div>
                 <div class="form-group mb-3">
                   <label for="vendor">Vendor
                   </label>
-                  <input id="vendor" name="vendor" type="text" class="form-control validate" required field="*{vendor}" />
+                  <input id="vendor" name="vendor" type="text" class="form-control validate" required />
                 </div>
                 <div class="form-group mb-3">
                   <label for="price">Price
                   </label>
-                  <input id="price" name="price" type="text" class="form-control validate" field="*{price}" required />
+                  <input id="price" name="price" type="text" class="form-control validate" required />
                 </div>
                 <div class="form-group mb-3">
                   <label for="description">Description</label>
-                  <textarea class="form-control validate" rows="3" field="*{description}" required></textarea>
+                  <textarea class="form-control validate" rows="3" required></textarea>
                 </div>
                 <div class="form-group mb-3">
                   <label for="category">Category</label>
-                  <select class="custom-select tm-select-accounts" id="category" field="*{category}" >
+                  <select class="custom-select tm-select-accounts" id="category" >
                     <option value = "null">--Select category--</option>
-                    <option value="Whole Spices">Whole Spices</option>
-                    <option value="Ground Spices">Ground Spices</option>
-                    <option value="Herbs">Herbs</option>
-                    <option value="Speciality Spices">Speciality Spices</option>
-                    <option value="Blends and Mixes">Blends and Mixes</option>
+                    <option value="Whole Spices">Desktop</option>
+                    <option value="Ground Spices">Laptops</option>
+                    <option value="Herbs">Smart Phones</option>
+                    <option value="Speciality Spices">Drone</option>
+                    <option value="Blends and Mixes">Earpodes</option>
                   </select>
                 </div>
                 <div class="row">
@@ -127,12 +131,12 @@
                     <label for="expire_date">Expire Date
                     </label>
                     <input id="expire_date" name="expire_date" type="text" class="form-control validate"
-                      data-large-mode="true" field="*{expiry_date}" />
+                      data-large-mode="true" />
                   </div>
                   <div class="form-group mb-3 col-xs-12 col-sm-6">
                     <label for="stock">Units In Stock
                     </label>
-                    <input id="stock" name="stock" type="text" class="form-control validate" field="*{quantity}" required />
+                    <input id="stock" name="stock" type="text" class="form-control validate" required />
                   </div>
                 </div>
 

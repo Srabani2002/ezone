@@ -1,6 +1,6 @@
 <%@ page language="java"%>
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -39,42 +39,47 @@
         <ul class="navbar-nav mx-auto h-100">
           <li class="nav-item">
             <a class="nav-link" href="dashboard.html">
-              <i class="fas fa-tachometer-alt"></i> Dashboard
+               Dashboard
               <span class="sr-only">(current)</span>
             </a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link" href="products.html">
-              <i class="fas fa-shopping-cart"></i> Products
+            <a class="nav-link" href="/add-product">
+              Products
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="./orders.html">
-                <i class="fas fa-shopping-basket"></i>Orders
+            <a class="nav-link" href="/admin-products">
+              Refurbs
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/admin-products">
+              Services
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" href="/orders">
+                Orders
             </a>
         </li>
-
+  
         <li class="nav-item">
-            <a class="nav-link active" href="./blogs.html">
-              <i class="fas fa-pencil-ruler"></i>
+            <a class="nav-link" href="/add-blogs">
+              
               Blogs
             </a>
         </li>
-
+  
           <li class="nav-item">
-            <a class="nav-link" href="./accounts.html">
-              <i class="fas fa-user"></i> Accounts
+            <a class="nav-link" href="/admin">
+              Accounts
             </a>
           </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link d-block" href="login.html">
-              ADMIN-- <b>LOGOUT</b>
-            </a>
-          </li>
+          
         </ul>
       </div>
     </div>

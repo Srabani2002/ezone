@@ -23,11 +23,19 @@ public class AdminController
     }
     @GetMapping("/add-blogs")
     public String addblogs() {
-        return "admin/add-blogs";
+        return "admin/blogs";
     }
-    @GetMapping("/add-products")
+    @GetMapping("/add-product")
     public String addproducts() {
-        return "admin/add-products";
+        return "admin/addproduct";
+    }
+    @GetMapping("/add-service")
+    public String addservice() {
+        return "admin/addservice";
+    }
+    @GetMapping("/add-refurb")
+    public String addrefurb() {
+        return "admin/addrefurb";
     }
     @GetMapping("/blogs")
     public String blogs() {
@@ -43,7 +51,7 @@ public class AdminController
     }
     @GetMapping("/edit-products")
     public String editproducts() {
-        return "admin/edit-products";
+        return "admin/edit-product";
     }
     @GetMapping("/orders")
     public String orders() {
