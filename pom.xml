@@ -58,14 +58,8 @@
 			<version>1.18.24</version>
 			<scope>provided</scope>
 		</dependency>
-
-
-
-
-
-	</dependencies>
-
-	<build>
+ </dependencies>
+    <build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -73,5 +67,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
