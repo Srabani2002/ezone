@@ -96,7 +96,7 @@ button:focus {
   margin-bottom: 30px;
 }
 .nav-link {
-  color: #fff;
+  color: #141111;
   height: 100%;
   display: flex;
   align-items: center;
@@ -115,7 +115,7 @@ button:focus {
 }
 .dropdown-menu {
   font-size: 90%;
-  color: #fff;
+  color: #0e0c0c;
   background-color: #567086;
   border-radius: 0;
   padding-top: 10px;
@@ -123,16 +123,16 @@ button:focus {
   min-width: auto;
 }
 .dropdown-item {
-  color: #fff;
+  color: #130505;
   padding: 15px 30px;
 }
 .navbar-nav .active > .nav-link,
 .navbar-nav .nav-link.active {
   background-color: #f5a623;
-  color: #fff;
+  color: #100f0f;
 }
 .navbar-nav .nav-link.active i {
-  color: #fff;
+  color: #0b0404;
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
@@ -185,7 +185,7 @@ button:focus {
 .tm-notification-item {
   padding: 15px;
   background-color: #4e657a;
-  color: #fff;
+  color: #0f0e0e;
   font-size: 95%;
   margin-bottom: 15px;
 }
@@ -203,13 +203,13 @@ button:focus {
 }
 .table {
   background-color: #50697f;
-  color: #fff;
+  color: #0e0101;
   font-size: 85%;
   margin-bottom: 0;
 }
 thead {
   background-color: #486177;
-  color: #fff;
+  color: #0c0404;
 }
 .table thead th {
   border-bottom: 0;
@@ -279,17 +279,17 @@ thead {
 }
 .form-control {
   background-color: #54657d;
-  color: #fff;
+  color: #0a0101;
   border: 0;
 }
 .form-control:focus {
   background-color: #60738e;
-  color: #fff;
+  color: #0a0404;
   border-color: transparent;
   box-shadow: 0 0 0 0.1rem rgb(180, 206, 233, 0.5);
 }
 .form-group label {
-  color: #fff;
+  color: #0e0606;
   margin-bottom: 10px;
 }
 .tm-hide-sm {
@@ -338,7 +338,7 @@ thead {
   padding: 10px 24px;
 }
 .btn-primary {
-  color: #fff;
+  color: #0e0303;
   background-color: #f5a623;
   border: 2px solid #f5a623;
   font-size: 90%;
@@ -509,7 +509,7 @@ input[type="checkbox"]:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #090909;
   background: #aaa;
 }
 .tm-product-img-edit {
@@ -547,7 +547,7 @@ input[type="checkbox"]:focus {
   color: #f5a623;
 }
 .tm-nav-icon {
-  color: #fff;
+  color: #0c0b0b;
 }
 .navbar-toggler:hover .tm-nav-icon {
   color: #f5a623;
@@ -567,7 +567,7 @@ input[type="checkbox"]:focus {
 }
 
 .tm-footer-link {
-  color: white;
+  color: #150101;
 }
 
 .tm-footer-link:hover,
@@ -617,7 +617,7 @@ input[type="checkbox"]:focus {
     text-align: center;
   }
   .nav-link {
-    color: #fff;
+    color: #140101;
     background-color: #567086;
     padding: 15px;
     flex-direction: row;
