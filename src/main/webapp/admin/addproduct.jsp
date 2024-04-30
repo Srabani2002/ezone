@@ -128,13 +128,13 @@
                 </div>
                 <div class="row">
                   <div class="form-group mb-3 col-xs-12 col-sm-6">
-                    <label for="expire_date">Expire Date
+                    <label for="expire_date">Longivity
                     </label>
                     <input id="expire_date" name="expire_date" type="text" class="form-control validate"
                       data-large-mode="true" />
                   </div>
                   <div class="form-group mb-3 col-xs-12 col-sm-6">
-                    <label for="stock">Units In Stock
+                    <label for="stock"> Stocks Available
                     </label>
                     <input id="stock" name="stock" type="text" class="form-control validate" required />
                   </div>

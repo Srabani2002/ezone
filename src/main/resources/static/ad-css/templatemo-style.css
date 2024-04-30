@@ -37,7 +37,7 @@ button:focus {
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #fff;
+  color: #150404;
 }
 .navbar {
   height: 100px;
@@ -92,7 +92,7 @@ button:focus {
 .tm-block-title {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #fff;
+  color: #0a0303;
   margin-bottom: 30px;
 }
 .nav-link {
