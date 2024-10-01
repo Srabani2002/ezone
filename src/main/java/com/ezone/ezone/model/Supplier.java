@@ -8,11 +8,10 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Order {
-   @Id
-   @GeneratedValue(strategy = GenerationType.UUID)
-    private int number;
+public class Supplier {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int sid;
     private String name;
-    private double amount;
-    private int date;
+    private String address;
 }

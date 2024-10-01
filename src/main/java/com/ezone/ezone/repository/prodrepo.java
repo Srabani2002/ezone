@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ezone.ezone.model.Product;
 
-public interface prodrepo extends JpaRepository<Product,Integer> {
+public interface ProdRepo extends JpaRepository<Product,Integer> {
     
 }
