@@ -2,8 +2,16 @@ package com.ezone.ezone;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.ezone.ezone.model.Product;
+
+import jakarta.persistence.MapKeyJoinColumn;
+
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 @Controller
@@ -27,6 +35,10 @@ public class AdminController
     }
     @GetMapping("/add-product")
     public String addproducts() {
+        return "admin/addproduct";
+    }
+    @PostMapping("/add-product")
+    public String add_products(@RequestBody Product product) {
         return "admin/addproduct";
     }
     @GetMapping("/add-service")
