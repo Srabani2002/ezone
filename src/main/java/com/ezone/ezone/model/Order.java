@@ -10,8 +10,8 @@ import lombok.Data;
 @Data
 public class Order {
    @Id
-   @GeneratedValue(strategy = GenerationType.UUID)
-    private int number;
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int orderNumber;
     private String name;
     private double amount;
     private int date;

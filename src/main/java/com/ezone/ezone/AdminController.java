@@ -1,20 +1,25 @@
 package com.ezone.ezone;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.ezone.ezone.model.Product;
+import com.ezone.ezone.service.ProdService;
 
 // import jakarta.persistence.MapKeyJoinColumn;
-
-import org.springframework.web.bind.annotation.RequestBody;
 
 
 
 @Controller
 public class AdminController 
 {
+
+    @Autowired
+    private ProdService prodService;
+
     @GetMapping("/admin")
     public String admin() {
         return "admin/index";
@@ -36,8 +41,9 @@ public class AdminController
         return "admin/addproduct";
     }
     @PostMapping("/add-product")
-    public String add_products(@RequestBody Product product) {
-        return "admin/addproduct";
+    public String add_products(@ModelAttribute Product product) {
+        prodService.addProduct(product);
+        return "redirect:/add-product?success";
     }
     @GetMapping("/add-service")
     public String addservice() {

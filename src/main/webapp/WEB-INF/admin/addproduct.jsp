@@ -95,67 +95,97 @@
           </div>
           <div class="row tm-edit-product-row">
             <div class="col-xl-6 col-lg-6 col-md-12">
-              <form action="#" action="/addproducts" method="post" class="tm-edit-product-form">
+              <form action="/add-product" method="post" class="tm-edit-product-form">
                 <div class="form-group mb-3">
-                  <label for="pname">Product Name
-                  </label>
-                  <input id="pname" name="pname" type="text" class="form-control validate" required />
+                  <label for="name">Product Name</label>
+                  <input id="name" name="name" type="text" class="form-control validate" required />
                 </div>
+
                 <div class="form-group mb-3">
-                  <label for="vendor">Vendor
-                  </label>
-                  <input id="vendor" name="vendor" type="text" class="form-control validate" required />
+                  <label for="supplier">Supplier</label>
+                  <input id="supplier" name="supplier" type="text" class="form-control validate" required />
                 </div>
+
                 <div class="form-group mb-3">
-                  <label for="price">Price
-                  </label>
-                  <input id="price" name="price" type="text" class="form-control validate" required />
+                  <label for="price">Price</label>
+                  <input id="price" name="price" type="number" step="0.01" class="form-control validate" required />
                 </div>
+
+                <div class="form-group mb-3">
+                  <label for="status">Product Status</label>
+                  <input id="status" name="status" type="text" class="form-control validate" placeholder="e.g., Available / Out of Stock" required />
+                </div>
+
                 <div class="form-group mb-3">
                   <label for="description">Description</label>
-                  <textarea class="form-control validate" rows="3" required></textarea>
+                  <textarea id="description" name="description" class="form-control validate" rows="3" required></textarea>
                 </div>
+
                 <div class="form-group mb-3">
                   <label for="category">Category</label>
-                  <select class="custom-select tm-select-accounts" id="category" >
-                    <option value = "null">--Select category--</option>
-                    <option value="Whole Spices">Desktop</option>
-                    <option value="Ground Spices">Laptops</option>
-                    <option value="Herbs">Smart Phones</option>
-                    <option value="Speciality Spices">Drone</option>
-                    <option value="Blends and Mixes">Earpodes</option>
+                  <select class="custom-select tm-select-accounts" id="category" name="category" required>
+                    <option value="">--Select category--</option>
+                    <option value="Desktop">Desktop</option>
+                    <option value="Laptops">Laptops</option>
+                    <option value="Smart_Phones">Smart Phones</option>
+                    <option value="Drone">Drone</option>
+                    <option value="Earpodes">Earpodes</option>
                   </select>
                 </div>
+
                 <div class="row">
                   <div class="form-group mb-3 col-xs-12 col-sm-6">
-                    <label for="expire_date">Longivity
-                    </label>
-                    <input id="expire_date" name="expire_date" type="text" class="form-control validate"
-                      data-large-mode="true" />
+                    <label for="manufactureDate">Manufacture Date</label>
+                    <input id="manufactureDate" name="manufactureDate" type="date" class="form-control validate" required />
                   </div>
+
                   <div class="form-group mb-3 col-xs-12 col-sm-6">
-                    <label for="stock"> Stocks Available
-                    </label>
-                    <input id="stock" name="stock" type="text" class="form-control validate" required />
+                    <label for="quantity">Stocks Available</label>
+                    <input id="quantity" name="quantity" type="number" class="form-control validate" required />
                   </div>
                 </div>
 
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-              <div class="tm-product-img-dummy mx-auto">
-                <i class="fas fa-cloud-upload-alt tm-upload-icon"
-                  onclick="document.getElementById('fileInput').click();"></i>
-              </div>
-              <div class="custom-file mt-3 mb-3">
-                <input id="fileInput" type="file" style="display:none;" />
-                <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE"
-                  onclick="document.getElementById('fileInput').click();" />
-              </div>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
-            </div>
-            </form>
+                <div class="form-group mb-3">
+                  <label for="refurbished">Is Refurbished?</label>
+                  <select id="refurbished" name="refurbished" class="custom-select tm-select-accounts" required>
+                    <option value="">--Select--</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                  </select>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="warrantyProvided">Warranty Provided?</label>
+                  <select id="warrantyProvided" name="warrantyProvided" class="custom-select tm-select-accounts" required>
+                    <option value="">--Select--</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                  </select>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="imageUrl">Image URL</label>
+                  <input id="imageUrl" name="imageUrl" type="text" class="form-control validate" placeholder="Or upload below" />
+                </div>
+
+                <!-- <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                  <div class="tm-product-img-dummy mx-auto">
+                    <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();"></i>
+                  </div>
+                  <div class="custom-file mt-3 mb-3">
+                    <input id="fileInput" name="imageFile" type="file" style="display:none;" />
+                    <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE"
+                      onclick="document.getElementById('fileInput').click();" />
+                  </div>
+                </div> -->
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
+                </div>
+              </form>
+              <% if (request.getParameter("success") != null) { %>
+                  <div class="alert alert-success">Product added successfully!</div>
+              <% } %>
           </div>
         </div>
       </div>
